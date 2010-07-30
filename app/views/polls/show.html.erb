@@ -1,0 +1,13 @@
+<p>
+  <b>Title:</b>
+  <%=h @poll.title %>
+</p>
+
+<p>
+  <b>Desc:</b>
+  <%=h @poll.desc %>
+</p>
+
+
+<%= link_to 'Edit', edit_poll_path(@poll) %> |
+<%= link_to 'Back', polls_path %>
