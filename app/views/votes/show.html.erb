@@ -1,0 +1,13 @@
+<p>
+  <b>Poll:</b>
+  <%=h @vote.poll_id %>
+</p>
+
+<p>
+  <b>Answer:</b>
+  <%=h @vote.answer %>
+</p>
+
+
+<%= link_to 'Edit', edit_vote_path(@vote) %> |
+<%= link_to 'Back', votes_path %>
