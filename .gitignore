@@ -1,0 +1,6 @@
+*.swp
+*.swo
+*.sqlite3
+*.log
+.DS_Store
+tmp/*
