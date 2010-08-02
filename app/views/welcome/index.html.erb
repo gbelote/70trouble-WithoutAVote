@@ -4,11 +4,11 @@
     <%= content_tag :h2, poll.title %>
     <%= content_tag :p, poll.desc %>
 
-    <% form_for poll do |f| %>
+    <% form_for poll.votes.build do |f| %>
       <% poll.answers.each do |answer| %>
         <p>
-          <%= radio_button 'poll', 'answer', answer.id %>
-          <%= label_tag "poll_answer_#{answer.id}", answer.answer %>
+          <%= radio_button 'vote', 'answer_id', answer.id %>
+          <%= label_tag "vote_answer_#{answer.id}", answer.answer %>
         </p>
       <% end %>
       <%= f.submit 'Vote!' %>
