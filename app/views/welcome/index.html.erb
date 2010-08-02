@@ -8,7 +8,7 @@
       <% poll.answers.each do |answer| %>
         <p>
           <%= radio_button 'vote', 'answer_id', answer.id %>
-          <%= label_tag "vote_answer_#{answer.id}", answer.answer %>
+          <%= label_tag "vote_answer_id_#{answer.id}", answer.answer %>
         </p>
       <% end %>
       <%= f.submit 'Vote!' %>
