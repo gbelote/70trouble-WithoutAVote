@@ -4,7 +4,7 @@
     <%= content_tag :h2, poll.title %>
     <%= content_tag :p, poll.desc %>
 
-    <% form_for vote do |f| %>
+    <% form_for poll do |f| %>
       <% poll.answers.each do |answer| %>
         <p>
           <%= radio_button 'poll', 'answer', answer.id %>
