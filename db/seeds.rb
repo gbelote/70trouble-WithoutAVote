@@ -5,3 +5,10 @@
 #   
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Major.create(:name => 'Daley', :city => cities.first)
+
+office_poll = Poll.create({
+    :title => "Who's the most cunning character from The Office (US version)?",
+    :desc => "Pick who you think is the most cunning...",
+    :answers => [Answer.create({ :answer => "Dwight" }), Answer.create({ :answer => "Jim" })]
+})
+

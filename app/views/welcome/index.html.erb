@@ -1,0 +1,19 @@
+
+<% @polls.each do |poll| %>
+  <% content_tag :div, :class => :poll do %>
+    <%= content_tag :h2, poll.title %>
+    <%= content_tag :p, poll.desc %>
+
+    <% form_for vote do |f| %>
+      <% poll.answers.each do |answer| %>
+        <p>
+          <%= radio_button 'poll', 'answer', answer.id %>
+          <%= label_tag "poll_answer_#{answer.id}", answer.answer %>
+        </p>
+      <% end %>
+      <%= f.submit 'Vote!' %>
+    <% end %>
+  <% end %>
+
+<% end %>
+
